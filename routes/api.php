@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('users', 'UserController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('elders', 'ElderController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
-Route::resource('elders/takenmeds', 'ElderTakenMedsController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+Route::resource('elders/takenmeds', 'ElderTakenMedController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);

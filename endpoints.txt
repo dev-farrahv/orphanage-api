@@ -1,0 +1,19 @@
++--------+-----------+---------------------------------+-------------------+------------------------------------------------------+--------------+
+| Domain | Method    | URI                             | Name              | Action                                               | Middleware   |
++--------+-----------+---------------------------------+-------------------+------------------------------------------------------+--------------+
+|        | GET|HEAD  | api/elders                      | elders.index      | App\Http\Controllers\ElderController@index           | api          | 
+|        | POST      | api/elders                      | elders.store      | App\Http\Controllers\ElderController@store           | api          |
+|        | DELETE    | api/elders/{elder}              | elders.destroy    | App\Http\Controllers\ElderController@destroy         | api          | - delete elders by id
+|        | GET|HEAD  | api/elders/{elder}              | elders.show       | App\Http\Controllers\ElderController@show            | api          | - get elders by id
+|        | PUT|PATCH | api/elders/{elder}              | elders.update     | App\Http\Controllers\ElderController@update          | api          | - update elders by id
+|        | POST      | api/elders/takenmeds            | takenmeds.store   | App\Http\Controllers\ElderTakenMedController@store   | api          |
+|        | GET|HEAD  | api/elders/takenmeds            | takenmeds.index   | App\Http\Controllers\ElderTakenMedController@index   | api          |
+|        | DELETE    | api/elders/takenmeds/{takenmed} | takenmeds.destroy | App\Http\Controllers\ElderTakenMedController@destroy | api          | - delete taken meds by elders_taken_meds_id
+|        | PUT|PATCH | api/elders/takenmeds/{takenmed} | takenmeds.update  | App\Http\Controllers\ElderTakenMedController@update  | api          | - update taken meds by elders_taken_meds_id
+|        | GET|HEAD  | api/elders/takenmeds/{takenmed} | takenmeds.show    | App\Http\Controllers\ElderTakenMedController@show    | api          | - get taken meds by elders_taken_meds_id
+|        | GET|HEAD  | api/users                       | users.index       | App\Http\Controllers\UserController@index            | api          |
+|        | POST      | api/users                       | users.store       | App\Http\Controllers\UserController@store            | api          |
+|        | DELETE    | api/users/{user}                | users.destroy     | App\Http\Controllers\UserController@destroy          | api          |
+|        | PUT|PATCH | api/users/{user}                | users.update      | App\Http\Controllers\UserController@update           | api          |
+|        | GET|HEAD  | api/users/{user}                | users.show        | App\Http\Controllers\UserController@show             | api          |
++--------+-----------+---------------------------------+-------------------+------------------------------------------------------+--------------+
