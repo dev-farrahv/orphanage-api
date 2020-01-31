@@ -1,19 +1,29 @@
-+--------+-----------+---------------------------------+-------------------+------------------------------------------------------+--------------+
-| Domain | Method    | URI                             | Name              | Action                                               | Middleware   |
-+--------+-----------+---------------------------------+-------------------+------------------------------------------------------+--------------+
-|        | GET|HEAD  | api/elders                      | elders.index      | App\Http\Controllers\ElderController@index           | api          | 
-|        | POST      | api/elders                      | elders.store      | App\Http\Controllers\ElderController@store           | api          |
-|        | DELETE    | api/elders/{elder}              | elders.destroy    | App\Http\Controllers\ElderController@destroy         | api          | - delete elders by id
-|        | GET|HEAD  | api/elders/{elder}              | elders.show       | App\Http\Controllers\ElderController@show            | api          | - get elders by id
-|        | PUT|PATCH | api/elders/{elder}              | elders.update     | App\Http\Controllers\ElderController@update          | api          | - update elders by id
-|        | POST      | api/elders/takenmeds            | takenmeds.store   | App\Http\Controllers\ElderTakenMedController@store   | api          |
-|        | GET|HEAD  | api/elders/takenmeds            | takenmeds.index   | App\Http\Controllers\ElderTakenMedController@index   | api          |
-|        | DELETE    | api/elders/takenmeds/{takenmed} | takenmeds.destroy | App\Http\Controllers\ElderTakenMedController@destroy | api          | - delete taken meds by elders_taken_meds_id
-|        | PUT|PATCH | api/elders/takenmeds/{takenmed} | takenmeds.update  | App\Http\Controllers\ElderTakenMedController@update  | api          | - update taken meds by elders_taken_meds_id
-|        | GET|HEAD  | api/elders/takenmeds/{takenmed} | takenmeds.show    | App\Http\Controllers\ElderTakenMedController@show    | api          | - get taken meds by elders_taken_meds_id
-|        | GET|HEAD  | api/users                       | users.index       | App\Http\Controllers\UserController@index            | api          |
-|        | POST      | api/users                       | users.store       | App\Http\Controllers\UserController@store            | api          |
-|        | DELETE    | api/users/{user}                | users.destroy     | App\Http\Controllers\UserController@destroy          | api          |
-|        | PUT|PATCH | api/users/{user}                | users.update      | App\Http\Controllers\UserController@update           | api          |
-|        | GET|HEAD  | api/users/{user}                | users.show        | App\Http\Controllers\UserController@show             | api          |
-+--------+-----------+---------------------------------+-------------------+------------------------------------------------------+--------------+
++--------+-----------+---------------------------------------------------------+----------------------------------+--------------------------------------------------------------+--------------+
+| Domain | Method    | URI                                                     | Name                             | Action                                                       | Middleware   |
++--------+-----------+---------------------------------------------------------+----------------------------------+--------------------------------------------------------------+--------------+
+|        | GET|HEAD  | api/elders                                              | elders.index                     | App\Http\Controllers\ElderController@index                   | api          |
+|        | POST      | api/elders                                              | elders.store                     | App\Http\Controllers\ElderController@store                   | api          |
+|        | DELETE    | api/elders/{elder}                                      | elders.destroy                   | App\Http\Controllers\ElderController@destroy                 | api          |
+|        | GET|HEAD  | api/elders/{elder}                                      | elders.show                      | App\Http\Controllers\ElderController@show                    | api          |
+|        | PUT|PATCH | api/elders/{elder}                                      | elders.update                    | App\Http\Controllers\ElderController@update                  | api          |
+|        | POST      | api/elders-medical-history                              | elders-medical-history.store     | App\Http\Controllers\ElderMedicalHistoryController@store     | api          |
+|        | GET|HEAD  | api/elders-medical-history                              | elders-medical-history.index     | App\Http\Controllers\ElderMedicalHistoryController@index     | api          |
+|        | DELETE    | api/elders-medical-history/{elders_medical_history}     | elders-medical-history.destroy   | App\Http\Controllers\ElderMedicalHistoryController@destroy   | api          |
+|        | PUT|PATCH | api/elders-medical-history/{elders_medical_history}     | elders-medical-history.update    | App\Http\Controllers\ElderMedicalHistoryController@update    | api          |
+|        | GET|HEAD  | api/elders-medical-history/{elders_medical_history}     | elders-medical-history.show      | App\Http\Controllers\ElderMedicalHistoryController@show      | api          |
+|        | POST      | api/elders-taken-medicine                               | elders-taken-medicine.store      | App\Http\Controllers\ElderTakenMedController@store           | api          |
+|        | GET|HEAD  | api/elders-taken-medicine                               | elders-taken-medicine.index      | App\Http\Controllers\ElderTakenMedController@index           | api          |
+|        | DELETE    | api/elders-taken-medicine/{elders_taken_medicine}       | elders-taken-medicine.destroy    | App\Http\Controllers\ElderTakenMedController@destroy         | api          |
+|        | PUT|PATCH | api/elders-taken-medicine/{elders_taken_medicine}       | elders-taken-medicine.update     | App\Http\Controllers\ElderTakenMedController@update          | api          |
+|        | GET|HEAD  | api/elders-taken-medicine/{elders_taken_medicine}       | elders-taken-medicine.show       | App\Http\Controllers\ElderTakenMedController@show            | api          |
+|        | GET|HEAD  | api/users                                               | users.index                      | App\Http\Controllers\UserController@index                    | api          |
+|        | POST      | api/users                                               | users.store                      | App\Http\Controllers\UserController@store                    | api          |
+|        | DELETE    | api/users/{user}                                        | users.destroy                    | App\Http\Controllers\UserController@destroy                  | api          |
+|        | PUT|PATCH | api/users/{user}                                        | users.update                     | App\Http\Controllers\UserController@update                   | api          |
+|        | GET|HEAD  | api/users/{user}                                        | users.show                       | App\Http\Controllers\UserController@show                     | api          |
+|        | POST      | api/users-employment-history                            | users-employment-history.store   | App\Http\Controllers\UserEmploymentHistoryController@store   | api          |
+|        | GET|HEAD  | api/users-employment-history                            | users-employment-history.index   | App\Http\Controllers\UserEmploymentHistoryController@index   | api          |
+|        | DELETE    | api/users-employment-history/{users_employment_history} | users-employment-history.destroy | App\Http\Controllers\UserEmploymentHistoryController@destroy | api          |
+|        | PUT|PATCH | api/users-employment-history/{users_employment_history} | users-employment-history.update  | App\Http\Controllers\UserEmploymentHistoryController@update  | api          |
+|        | GET|HEAD  | api/users-employment-history/{users_employment_history} | users-employment-history.show    | App\Http\Controllers\UserEmploymentHistoryController@show    | api          |
++--------+-----------+---------------------------------------------------------+----------------------------------+--------------------------------------------------------------+--------------+
