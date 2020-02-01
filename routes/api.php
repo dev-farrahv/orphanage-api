@@ -22,3 +22,6 @@ Route::resource('users-employment-history', 'UserEmploymentHistoryController', [
 Route::resource('elders', 'ElderController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('elders-taken-medicine', 'ElderTakenMedController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('elders-medical-history', 'ElderMedicalHistoryController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+Route::resource('medicines', 'MedicineController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+Route::resource('guests', 'GuestController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+Route::resource('archives', 'ArchiveController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
