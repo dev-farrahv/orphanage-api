@@ -24,14 +24,16 @@ class Users extends Migration
             $table->string('nick_name')->nullable();
             $table->tinyInteger('gender')->nullable(); // 1=male, 2=female
             $table->integer('age')->nullable();
-            $table->dateTime('birth_date')->nullable();
+            $table->string('birth_date')->nullable();
             $table->string('birth_place')->nullable();
-            $table->dateTime('sabbath')->nullable();
+            $table->string('sabbath')->nullable();
             $table->string('provincial_address')->nullable();
             $table->tinyInteger('civil_status')->nullable(); // 1=single, 2=married
             $table->string('nationality')->nullable();
             $table->string('address')->nullable();
-            $table->dateTime('date_hired')->nullable();
+            $table->string('date_hired')->nullable();
+            $table->integer('status')->nullable(); // 0=inactive, 1=active
+            $table->integer('is_admin')->nullable(); // 0=no, 1=yes            
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

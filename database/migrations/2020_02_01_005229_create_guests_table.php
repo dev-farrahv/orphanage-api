@@ -21,8 +21,8 @@ class CreateGuestsTable extends Migration
             $table->integer('relationship_id')->nullable();
             $table->string('relationship_description')->nullable();
             $table->integer('elder_id')->nullable();
-            $table->datetime('time_in')->nullable();
-            $table->datetime('time_out')->nullable();
+            $table->string('time_in')->nullable();
+            $table->string('time_out')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

@@ -18,8 +18,8 @@ class CreateUserEmploymentHistoriesTable extends Migration
             $table->string('company')->nullable();
             $table->string('position')->nullable();
             $table->string('duties', 255)->nullable();
-            $table->date('date_from')->nullable();
-            $table->date('date_to')->nullable();
+            $table->string('date_from')->nullable();
+            $table->string('date_to')->nullable();
             $table->string('reference', 255)->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();

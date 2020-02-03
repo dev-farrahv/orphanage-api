@@ -16,7 +16,7 @@ class CreateMedicinesTable extends Migration
         Schema::create('medicines', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('medicine_name')->nullable();
-            $table->datetime('expiration_date')->nullable();
+            $table->string('expiration_date')->nullable();
             $table->integer('type_of_medicine_id')->nullable();
             $table->string('type_of_medicine_description')->nullable();
             $table->integer('qty')->nullable();
