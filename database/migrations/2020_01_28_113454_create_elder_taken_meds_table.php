@@ -22,6 +22,7 @@ class CreateElderTakenMedsTable extends Migration
             $table->integer('assigned_staff_id')->nullable();
             $table->string('assigned_staff_name')->nullable();
             $table->integer('status')->nullable(); // 1= done
+            $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

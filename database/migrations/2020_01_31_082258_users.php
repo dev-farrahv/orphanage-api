@@ -33,7 +33,8 @@ class Users extends Migration
             $table->string('address')->nullable();
             $table->string('date_hired')->nullable();
             $table->integer('status')->nullable(); // 0=inactive, 1=active
-            $table->integer('is_admin')->nullable(); // 0=no, 1=yes            
+            $table->integer('is_admin')->default(0);  // 0=no, 1=yes 
+            $table->boolean('archived')->default(false);           
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

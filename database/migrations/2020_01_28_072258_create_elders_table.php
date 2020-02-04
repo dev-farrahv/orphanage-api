@@ -41,6 +41,7 @@ class CreateEldersTable extends Migration
             $table->string('oi_sss_id')->nullable();
             $table->string('oi_senior_citizen_id')->nullable();
             $table->string('oi_pagibig')->nullable();
+            $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

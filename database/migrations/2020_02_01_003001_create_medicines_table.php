@@ -20,6 +20,7 @@ class CreateMedicinesTable extends Migration
             $table->integer('type_of_medicine_id')->nullable();
             $table->string('type_of_medicine_description')->nullable();
             $table->integer('qty')->nullable();
+            $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

@@ -24,6 +24,7 @@ class CreateElderMedicalHistoriesTable extends Migration
             $table->string('family_history_description')->nullable();
             $table->integer('assigned_doctor_id')->nullable();
             $table->string('assigned_doctor_name')->nullable();
+            $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

@@ -23,6 +23,7 @@ class CreateGuestsTable extends Migration
             $table->integer('elder_id')->nullable();
             $table->string('time_in')->nullable();
             $table->string('time_out')->nullable();
+            $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

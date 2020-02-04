@@ -20,6 +20,7 @@ class CreateArchivesTable extends Migration
             $table->string('date_uploaded')->nullable();
             $table->string('document_type')->nullable();
             $table->string('file_type')->nullable();
+            $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

@@ -21,6 +21,7 @@ class CreateUserEmploymentHistoriesTable extends Migration
             $table->string('date_from')->nullable();
             $table->string('date_to')->nullable();
             $table->string('reference', 255)->nullable();
+            $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();
