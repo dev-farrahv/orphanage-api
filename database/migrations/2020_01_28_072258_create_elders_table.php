@@ -18,13 +18,14 @@ class CreateEldersTable extends Migration
             $table->string('first_name');
             $table->string('middle_name')->nullable();
             $table->string('last_name');
-            $table->string('nickname');
+            $table->string('nickname')->nullable();
             $table->integer('age')->nullable();
             $table->string('birth_place')->nullable();
             $table->string('provincial_address')->nullable();
             $table->string('birth_date')->nullable();
             $table->string('sabbath')->nullable();
-            $table->tinyInteger('civil_status')->nullable(); // 1=single, 2=married
+            $table->tinyInteger('civil_status')->nullable(); // 1=single, 2=married, 3=widowed
+            $table->tinyInteger('gender')->nullable(); // 1=male, 2=female
             $table->string('date_stay_in_orphanage')->nullable();
             $table->integer('bed_no')->nullable();
             $table->string('references')->nullable();
