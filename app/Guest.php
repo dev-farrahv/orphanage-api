@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\Elder;
 use Illuminate\Database\Eloquent\Model;
 
 class Guest extends Model
@@ -36,4 +36,14 @@ class Guest extends Model
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
+
+    /**
+     * The guest elder visited belongs to elders
+     *
+     * @return belongsTo
+     */
+    public function getElderVisited()
+    {
+        return $this->belongsTo(Elder::class, 'elder_id');
+    }
 }

@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 use App\Guest;
+use App\Elder;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
 {
     public function index()
     {
-        return Guest::all();
+        $allguest = Guest::all();
+        foreach ($allguest as $getguest) {
+            $getthiselder = Elder::where('id', $getguest['elder_id'])->first();
+            $getguest['elder_name'] = $getthiselder['first_name'] . ' '. $getthiselder['last_name'];
+        }
+        return $allguest;
     }
  
     public function show($id)
