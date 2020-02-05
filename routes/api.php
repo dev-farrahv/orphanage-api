@@ -17,6 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::resource('login', 'LoginController', ['except' => ['destroy']]);
 Route::resource('users', 'UserController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('users-employment-history', 'UserEmploymentHistoryController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('elders', 'ElderController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
