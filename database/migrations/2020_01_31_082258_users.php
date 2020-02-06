@@ -16,9 +16,9 @@ class Users extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('first_name');
-            $table->string('middle_name');
+            $table->string('middle_name')->nullable();
             $table->string('last_name');
-            $table->string('email');
+            $table->string('email')->nullable();;
             $table->string('username')->nullable();
             $table->string('password')->nullable();
             $table->string('nick_name')->nullable();
@@ -32,6 +32,10 @@ class Users extends Migration
             $table->string('nationality')->nullable();
             $table->string('address')->nullable();
             $table->string('date_hired')->nullable();
+            $table->string('oi_phil_health')->nullable();
+            $table->string('oi_sss')->nullable();
+            $table->string('oi_umid')->nullable();
+            $table->string('oi_pagibig')->nullable();
             $table->integer('status')->nullable(); // 0=inactive, 1=active
             $table->integer('is_admin')->default(0);  // 0=no, 1=yes 
             $table->boolean('archived')->default(false);           

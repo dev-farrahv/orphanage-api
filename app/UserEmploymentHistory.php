@@ -12,6 +12,7 @@ class UserEmploymentHistory extends Model
      * @var array
      */
     protected $fillable = [
+        'staff_id',
         'company',
         'position',
         'duties',

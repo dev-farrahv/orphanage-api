@@ -34,6 +34,12 @@ class User extends Authenticatable
         'nationality',
         'address',
         'date_hired',
+        'oi_phil_health',
+        'oi_sss',
+        'oi_umid',
+        'oi_pagibig',
+        'is_admin',
+        'status',
         'created_by',
         'updated_by'
     ];

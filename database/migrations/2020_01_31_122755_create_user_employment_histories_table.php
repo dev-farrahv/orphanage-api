@@ -15,6 +15,7 @@ class CreateUserEmploymentHistoriesTable extends Migration
     {
         Schema::create('user_employment_histories', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('staff_id')->nullable();
             $table->string('company')->nullable();
             $table->string('position')->nullable();
             $table->string('duties', 255)->nullable();
