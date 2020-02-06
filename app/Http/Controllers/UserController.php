@@ -7,8 +7,15 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $params = $request->all();
+
+        if($request->has('is_admin')){
+            $collection = User::where('is_admin', $params['is_admin'])->get();
+            return $collection;
+        }
+        
         return User::all();
     }
  
