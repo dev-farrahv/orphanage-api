@@ -29,7 +29,7 @@ class ElderMedicalHistoryController extends Controller
         return $ElderMedicalHistory;
     }
 
-    public function delete(Request $request, $id)
+    public function destroy(Request $request, $id)
     {
         $ElderMedicalHistory = ElderMedicalHistory::findOrFail($id);
         $ElderMedicalHistory->delete();
