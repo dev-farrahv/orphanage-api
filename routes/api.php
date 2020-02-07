@@ -27,3 +27,4 @@ Route::resource('medicines', 'MedicineController', ['only' => ['index', 'show', 
 Route::resource('guests', 'GuestController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('archives', 'ArchiveController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('hospitals', 'HospitalController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+Route::resource('doctors', 'DoctorController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
