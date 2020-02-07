@@ -24,10 +24,10 @@ class CreateEldersTable extends Migration
             $table->string('provincial_address')->nullable();
             $table->string('birth_date')->nullable();
             $table->string('sabbath')->nullable();
-            $table->tinyInteger('civil_status')->nullable(); // 1=single, 2=married, 3=widowed
-            $table->tinyInteger('gender')->nullable(); // 1=male, 2=female
+            $table->string('civil_status')->nullable(); // 1=single, 2=married, 3=widowed
+            $table->string('gender')->nullable(); // 1=male, 2=female
             $table->string('date_stay_in_orphanage')->nullable();
-            $table->integer('bed_no')->nullable();
+            $table->string('bed_no')->nullable();
             $table->string('references')->nullable();
             $table->string('cp_nationality')->nullable();
             $table->string('cp_first_name')->nullable();

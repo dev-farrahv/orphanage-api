@@ -22,13 +22,13 @@ class Users extends Migration
             $table->string('username')->nullable();
             $table->string('password')->nullable();
             $table->string('nick_name')->nullable();
-            $table->tinyInteger('gender')->nullable(); // 1=male, 2=female
+            $table->string('gender')->nullable(); // 1=male, 2=female
             $table->integer('age')->nullable();
             $table->string('birth_date')->nullable();
             $table->string('birth_place')->nullable();
             $table->string('sabbath')->nullable();
             $table->string('provincial_address')->nullable();
-            $table->tinyInteger('civil_status')->nullable(); // 1=single, 2=married
+            $table->string('civil_status')->nullable(); // 1=single, 2=married
             $table->string('nationality')->nullable();
             $table->string('address')->nullable();
             $table->string('date_hired')->nullable();
