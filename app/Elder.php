@@ -36,6 +36,7 @@ class Elder extends Model
         'oi_sss_id',
         'oi_senior_citizen_id',
         'oi_pagibig',
+        'status',
         'created_by',
         'updated_by',
     ];
