@@ -8,6 +8,12 @@ class UserEmploymentHistoryController extends Controller
 {
     public function index()
     {
+        $params = $request->all();
+
+        if($request->has('staff_id')){
+            $collection = UserEmploymentHistory::where('staff_id', $params['staff_id'])->get();
+            return $collection;
+        }
         return UserEmploymentHistory::all();
     }
  
