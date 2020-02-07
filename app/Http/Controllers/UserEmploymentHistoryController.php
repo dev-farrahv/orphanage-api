@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class UserEmploymentHistoryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $params = $request->all();
 
