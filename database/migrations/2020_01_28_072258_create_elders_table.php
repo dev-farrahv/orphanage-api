@@ -29,7 +29,7 @@ class CreateEldersTable extends Migration
             $table->string('date_stay_in_orphanage')->nullable();
             $table->string('bed_no')->nullable();
             $table->string('references')->nullable();
-            $table->string('cp_nationality')->nullable();
+            $table->string('nationality')->nullable();
             $table->string('cp_first_name')->nullable();
             $table->string('cp_middle_name')->nullable();
             $table->string('cp_surname')->nullable();

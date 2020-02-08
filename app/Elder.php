@@ -24,8 +24,11 @@ class Elder extends Model
         'birth_date',
         'sabbath',
         'civil_status',
+        'gender',
         'date_stay_in_orphanage',
         'bed_no',
+        'references',
+        'nationality',
         'cp_first_name',
         'cp_middle_name',
         'cp_surname',
@@ -39,6 +42,7 @@ class Elder extends Model
         'status',
         'created_by',
         'updated_by',
+        'cp_work',
     ];
 
 
