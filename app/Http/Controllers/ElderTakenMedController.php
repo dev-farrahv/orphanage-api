@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 
 class ElderTakenMedController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $params = $request->all();
+
+        if($request->has('elder_id')){
+            $collection = ElderTakenMed::where('elder_id', $params['elder_id'])->get();
+            return $collection;
+        }
         return ElderTakenMed::all();
     }
  

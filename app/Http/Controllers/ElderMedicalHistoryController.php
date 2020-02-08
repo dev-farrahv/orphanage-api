@@ -6,8 +6,14 @@ use Illuminate\Http\Request;
 
 class ElderMedicalHistoryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $params = $request->all();
+
+        if($request->has('elder_id')){
+            $collection = ElderMedicalHistory::where('elder_id', $params['elder_id'])->get();
+            return $collection;
+        }
         return ElderMedicalHistory::all();
     }
  
