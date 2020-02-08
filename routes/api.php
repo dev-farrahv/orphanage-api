@@ -28,3 +28,4 @@ Route::resource('guests', 'GuestController', ['only' => ['index', 'show', 'store
 Route::resource('archives', 'ArchiveController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('hospitals', 'HospitalController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('doctors', 'DoctorController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+Route::resource('tasks', 'TaskController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
