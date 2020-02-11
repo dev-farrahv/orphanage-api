@@ -22,6 +22,7 @@ class CreateHospitalsTable extends Migration
             $table->json('service_offer')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
+            $table->boolean('archived')->default(false);
             $table->timestamps();
         });
     }

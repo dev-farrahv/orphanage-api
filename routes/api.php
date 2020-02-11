@@ -29,3 +29,6 @@ Route::resource('archives', 'ArchiveController', ['only' => ['index', 'show', 's
 Route::resource('hospitals', 'HospitalController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('doctors', 'DoctorController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('tasks', 'TaskController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+
+//Route::resource('archives-get-all-by-archive', 'ArchiveController@getAllByArchived', ['except' => ['destroy']]);
+Route::get('archives-get-all-by-archive', 'ArchiveController@getAllByArchived');

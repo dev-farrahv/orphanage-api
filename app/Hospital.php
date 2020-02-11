@@ -17,6 +17,7 @@ class Hospital extends Model
         'hospital_contact_no',
         'about',
         'service_offer',
+        'archived',
         'created_by',
         'updated_by',
     ];

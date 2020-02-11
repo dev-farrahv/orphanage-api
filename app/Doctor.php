@@ -16,6 +16,7 @@ class Doctor extends Model
         'contact_no',
         'schedules',
         'specialization',
+        'archived',
         'created_by',
         'updated_by',
     ];

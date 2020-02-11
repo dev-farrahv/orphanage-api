@@ -1,7 +1,18 @@
 <?php
-
+use DB;
 namespace App\Http\Controllers;
 use App\Archive;
+use App\Doctor;
+use App\Elder;
+use App\ElderMedicalHistory;
+use App\ElderTakenMed;
+use App\Guest;
+use App\Hospital;
+use App\Login;
+use App\Medicine;
+use App\Task;
+use App\User;
+use App\UserEmploymentHistory;
 use Illuminate\Http\Request;
 
 class ArchiveController extends Controller
@@ -35,5 +46,18 @@ class ArchiveController extends Controller
         $Archive->delete();
 
         return 204;
+    }
+
+    public function getAllByArchived(Request $request)
+    {
+        $params = $request->all();
+
+        //if($request->has('is_admin')){
+            $collection = DB::table($params['table'])->get();
+            //$collection = $params['table']::where('archived', $params['archived_value'])->get();
+            return $collection;
+        //}
+
+        //return Archive::all();
     }
 }

@@ -21,6 +21,7 @@ class CreateDoctorsTable extends Migration
             $table->string('specialization')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
+            $table->boolean('archived')->default(false);
             $table->timestamps();
         });
     }

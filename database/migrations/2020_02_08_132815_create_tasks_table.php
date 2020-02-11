@@ -27,6 +27,7 @@ class CreateTasksTable extends Migration
             $table->string('task_owner_id')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
+            $table->boolean('archived')->default(false);
             $table->timestamps();
         });
     }

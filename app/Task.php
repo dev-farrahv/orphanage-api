@@ -22,6 +22,7 @@ class Task extends Model
         'status',
         'task_description',
         'task_owner_id',
+        'archived',
         'created_by',
         'updated_by',   
     ];

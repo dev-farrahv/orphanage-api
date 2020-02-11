@@ -40,6 +40,7 @@ class User extends Authenticatable
         'oi_pagibig',
         'is_admin',
         'status',
+        'archived',
         'created_by',
         'updated_by'
     ];
