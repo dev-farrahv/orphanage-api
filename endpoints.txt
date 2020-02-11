@@ -1,86 +1,67 @@
 +--------+-----------+---------------------------------------------------------+----------------------------------+--------------------------------------------------------------+-------------------+
 | Domain | Method    | URI                                                     | Name                             | Action                                                       | Middleware        |
 +--------+-----------+---------------------------------------------------------+----------------------------------+--------------------------------------------------------------+-------------------+
-|        | GET|HEAD  | /                                                       |                                  | Closure                                                      | web
-         |
-|        | POST      | api/archives                                            | archives.store                   | App\Http\Controllers\ArchiveController@store                 | api,cors
-         |
-|        | GET|HEAD  | api/archives                                            | archives.index                   | App\Http\Controllers\ArchiveController@index                 | api,cors
-         |
-|        | DELETE    | api/archives/{archive}                                  | archives.destroy                 | App\Http\Controllers\ArchiveController@destroy               | api,cors
-         |
-|        | PUT|PATCH | api/archives/{archive}                                  | archives.update                  | App\Http\Controllers\ArchiveController@update                | api,cors
-         |
-|        | GET|HEAD  | api/archives/{archive}                                  | archives.show                    | App\Http\Controllers\ArchiveController@show                  | api,cors
-         |
-|        | GET|HEAD  | api/elders                                              | elders.index                     | App\Http\Controllers\ElderController@index                   | api,cors
-         |
-|        | POST      | api/elders                                              | elders.store                     | App\Http\Controllers\ElderController@store                   | api,cors
-         |
-|        | POST      | api/elders-medical-history                              | elders-medical-history.store     | App\Http\Controllers\ElderMedicalHistoryController@store     | api,cors
-         |
-|        | GET|HEAD  | api/elders-medical-history                              | elders-medical-history.index     | App\Http\Controllers\ElderMedicalHistoryController@index     | api,cors
-         |
-|        | PUT|PATCH | api/elders-medical-history/{elders_medical_history}     | elders-medical-history.update    | App\Http\Controllers\ElderMedicalHistoryController@update    | api,cors
-         |
-|        | GET|HEAD  | api/elders-medical-history/{elders_medical_history}     | elders-medical-history.show      | App\Http\Controllers\ElderMedicalHistoryController@show      | api,cors
-         |
-|        | DELETE    | api/elders-medical-history/{elders_medical_history}     | elders-medical-history.destroy   | App\Http\Controllers\ElderMedicalHistoryController@destroy   | api,cors
-         |
-|        | GET|HEAD  | api/elders-taken-medicine                               | elders-taken-medicine.index      | App\Http\Controllers\ElderTakenMedController@index           | api,cors
-         |
-|        | POST      | api/elders-taken-medicine                               | elders-taken-medicine.store      | App\Http\Controllers\ElderTakenMedController@store           | api,cors
-         |
-|        | DELETE    | api/elders-taken-medicine/{elders_taken_medicine}       | elders-taken-medicine.destroy    | App\Http\Controllers\ElderTakenMedController@destroy         | api,cors
-         |
-|        | GET|HEAD  | api/elders-taken-medicine/{elders_taken_medicine}       | elders-taken-medicine.show       | App\Http\Controllers\ElderTakenMedController@show            | api,cors
-         |
-|        | PUT|PATCH | api/elders-taken-medicine/{elders_taken_medicine}       | elders-taken-medicine.update     | App\Http\Controllers\ElderTakenMedController@update          | api,cors
-         |
-|        | GET|HEAD  | api/elders/{elder}                                      | elders.show                      | App\Http\Controllers\ElderController@show                    | api,cors
-         |
-|        | PUT|PATCH | api/elders/{elder}                                      | elders.update                    | App\Http\Controllers\ElderController@update                  | api,cors
-         |
-|        | DELETE    | api/elders/{elder}                                      | elders.destroy                   | App\Http\Controllers\ElderController@destroy                 | api,cors
-         |
-|        | POST      | api/guests                                              | guests.store                     | App\Http\Controllers\GuestController@store                   | api,cors
-         |
-|        | GET|HEAD  | api/guests                                              | guests.index                     | App\Http\Controllers\GuestController@index                   | api,cors
-         |
-|        | DELETE    | api/guests/{guest}                                      | guests.destroy                   | App\Http\Controllers\GuestController@destroy                 | api,cors
-         |
-|        | PUT|PATCH | api/guests/{guest}                                      | guests.update                    | App\Http\Controllers\GuestController@update                  | api,cors
-         |
-|        | GET|HEAD  | api/guests/{guest}                                      | guests.show                      | App\Http\Controllers\GuestController@show                    | api,cors
-         |
-|        | GET|HEAD  | api/medicines                                           | medicines.index                  | App\Http\Controllers\MedicineController@index                | api,cors
-         |
-|        | POST      | api/medicines                                           | medicines.store                  | App\Http\Controllers\MedicineController@store                | api,cors
-         |
-|        | GET|HEAD  | api/medicines/{medicine}                                | medicines.show                   | App\Http\Controllers\MedicineController@show                 | api,cors
-         |
-|        | PUT|PATCH | api/medicines/{medicine}                                | medicines.update                 | App\Http\Controllers\MedicineController@update               | api,cors
-         |
-|        | DELETE    | api/medicines/{medicine}                                | medicines.destroy                | App\Http\Controllers\MedicineController@destroy              | api,cors
-         |
-|        | POST      | api/users                                               | users.store                      | App\Http\Controllers\UserController@store                    | api,cors
-         |
-|        | GET|HEAD  | api/users                                               | users.index                      | App\Http\Controllers\UserController@index                    | api,cors
-         |
-|        | POST      | api/users-employment-history                            | users-employment-history.store   | App\Http\Controllers\UserEmploymentHistoryController@store   | api,cors
-         |
-|        | GET|HEAD  | api/users-employment-history                            | users-employment-history.index   | App\Http\Controllers\UserEmploymentHistoryController@index   | api,cors
-         |
-|        | PUT|PATCH | api/users-employment-history/{users_employment_history} | users-employment-history.update  | App\Http\Controllers\UserEmploymentHistoryController@update  | api,cors
-         |
-|        | GET|HEAD  | api/users-employment-history/{users_employment_history} | users-employment-history.show    | App\Http\Controllers\UserEmploymentHistoryController@show    | api,cors
-         |
-|        | DELETE    | api/users-employment-history/{users_employment_history} | users-employment-history.destroy | App\Http\Controllers\UserEmploymentHistoryController@destroy | api,cors
-         |
-|        | DELETE    | api/users/{user}                                        | users.destroy                    | App\Http\Controllers\UserController@destroy                  | api,cors
-         |
-|        | PUT|PATCH | api/users/{user}                                        | users.update                     | App\Http\Controllers\UserController@update                   | api,cors
-         |
-|        | GET|HEAD  | api/users/{user}                                        | users.show                       | App\Http\Controllers\UserController@show                     | api,cors
-         |
+|        | GET|HEAD  | /                                                       |                                  | Closure                                                      | web               |
+|        | GET|HEAD  | api/archives                                            | archives.index                   | App\Http\Controllers\ArchiveController@index                 | api,cors          |
+|        | POST      | api/archives                                            | archives.store                   | App\Http\Controllers\ArchiveController@store                 | api,cors          |
+|        | DELETE    | api/archives/{archive}                                  | archives.destroy                 | App\Http\Controllers\ArchiveController@destroy               | api,cors          |
+|        | GET|HEAD  | api/archives/{archive}                                  | archives.show                    | App\Http\Controllers\ArchiveController@show                  | api,cors          |
+|        | PUT|PATCH | api/archives/{archive}                                  | archives.update                  | App\Http\Controllers\ArchiveController@update                | api,cors          |
+|        | GET|HEAD  | api/doctors                                             | doctors.index                    | App\Http\Controllers\DoctorController@index                  | api,cors          |
+|        | POST      | api/doctors                                             | doctors.store                    | App\Http\Controllers\DoctorController@store                  | api,cors          |
+|        | GET|HEAD  | api/doctors/{doctor}                                    | doctors.show                     | App\Http\Controllers\DoctorController@show                   | api,cors          |
+|        | PUT|PATCH | api/doctors/{doctor}                                    | doctors.update                   | App\Http\Controllers\DoctorController@update                 | api,cors          |
+|        | DELETE    | api/doctors/{doctor}                                    | doctors.destroy                  | App\Http\Controllers\DoctorController@destroy                | api,cors          |
+|        | GET|HEAD  | api/elders                                              | elders.index                     | App\Http\Controllers\ElderController@index                   | api,cors          |
+|        | POST      | api/elders                                              | elders.store                     | App\Http\Controllers\ElderController@store                   | api,cors          |
+|        | POST      | api/elders-medical-history                              | elders-medical-history.store     | App\Http\Controllers\ElderMedicalHistoryController@store     | api,cors          |
+|        | GET|HEAD  | api/elders-medical-history                              | elders-medical-history.index     | App\Http\Controllers\ElderMedicalHistoryController@index     | api,cors          |
+|        | PUT|PATCH | api/elders-medical-history/{elders_medical_history}     | elders-medical-history.update    | App\Http\Controllers\ElderMedicalHistoryController@update    | api,cors          |
+|        | GET|HEAD  | api/elders-medical-history/{elders_medical_history}     | elders-medical-history.show      | App\Http\Controllers\ElderMedicalHistoryController@show      | api,cors          |
+|        | DELETE    | api/elders-medical-history/{elders_medical_history}     | elders-medical-history.destroy   | App\Http\Controllers\ElderMedicalHistoryController@destroy   | api,cors          |
+|        | GET|HEAD  | api/elders-taken-medicine                               | elders-taken-medicine.index      | App\Http\Controllers\ElderTakenMedController@index           | api,cors          |
+|        | POST      | api/elders-taken-medicine                               | elders-taken-medicine.store      | App\Http\Controllers\ElderTakenMedController@store           | api,cors          |
+|        | DELETE    | api/elders-taken-medicine/{elders_taken_medicine}       | elders-taken-medicine.destroy    | App\Http\Controllers\ElderTakenMedController@destroy         | api,cors          |
+|        | GET|HEAD  | api/elders-taken-medicine/{elders_taken_medicine}       | elders-taken-medicine.show       | App\Http\Controllers\ElderTakenMedController@show            | api,cors          |
+|        | PUT|PATCH | api/elders-taken-medicine/{elders_taken_medicine}       | elders-taken-medicine.update     | App\Http\Controllers\ElderTakenMedController@update          | api,cors          |
+|        | GET|HEAD  | api/elders/{elder}                                      | elders.show                      | App\Http\Controllers\ElderController@show                    | api,cors          |
+|        | PUT|PATCH | api/elders/{elder}                                      | elders.update                    | App\Http\Controllers\ElderController@update                  | api,cors          |
+|        | DELETE    | api/elders/{elder}                                      | elders.destroy                   | App\Http\Controllers\ElderController@destroy                 | api,cors          |
+|        | POST      | api/guests                                              | guests.store                     | App\Http\Controllers\GuestController@store                   | api,cors          |
+|        | GET|HEAD  | api/guests                                              | guests.index                     | App\Http\Controllers\GuestController@index                   | api,cors          |
+|        | DELETE    | api/guests/{guest}                                      | guests.destroy                   | App\Http\Controllers\GuestController@destroy                 | api,cors          |
+|        | GET|HEAD  | api/guests/{guest}                                      | guests.show                      | App\Http\Controllers\GuestController@show                    | api,cors          |
+|        | PUT|PATCH | api/guests/{guest}                                      | guests.update                    | App\Http\Controllers\GuestController@update                  | api,cors          |
+|        | POST      | api/hospitals                                           | hospitals.store                  | App\Http\Controllers\HospitalController@store                | api,cors          |
+|        | GET|HEAD  | api/hospitals                                           | hospitals.index                  | App\Http\Controllers\HospitalController@index                | api,cors          |
+|        | PUT|PATCH | api/hospitals/{hospital}                                | hospitals.update                 | App\Http\Controllers\HospitalController@update               | api,cors          |
+|        | GET|HEAD  | api/hospitals/{hospital}                                | hospitals.show                   | App\Http\Controllers\HospitalController@show                 | api,cors          |
+|        | DELETE    | api/hospitals/{hospital}                                | hospitals.destroy                | App\Http\Controllers\HospitalController@destroy              | api,cors          |
+|        | POST      | api/login                                               | login.store                      | App\Http\Controllers\LoginController@store                   | api,cors          |
+|        | GET|HEAD  | api/login                                               | login.index                      | App\Http\Controllers\LoginController@index                   | api,cors          |
+|        | GET|HEAD  | api/login/create                                        | login.create                     | App\Http\Controllers\LoginController@create                  | api,cors          |
+|        | PUT|PATCH | api/login/{login}                                       | login.update                     | App\Http\Controllers\LoginController@update                  | api,cors          |
+|        | GET|HEAD  | api/login/{login}                                       | login.show                       | App\Http\Controllers\LoginController@show                    | api,cors          |
+|        | GET|HEAD  | api/login/{login}/edit                                  | login.edit                       | App\Http\Controllers\LoginController@edit                    | api,cors          |
+|        | POST      | api/medicines                                           | medicines.store                  | App\Http\Controllers\MedicineController@store                | api,cors          |
+|        | GET|HEAD  | api/medicines                                           | medicines.index                  | App\Http\Controllers\MedicineController@index                | api,cors          |
+|        | DELETE    | api/medicines/{medicine}                                | medicines.destroy                | App\Http\Controllers\MedicineController@destroy              | api,cors          |
+|        | GET|HEAD  | api/medicines/{medicine}                                | medicines.show                   | App\Http\Controllers\MedicineController@show                 | api,cors          |
+|        | PUT|PATCH | api/medicines/{medicine}                                | medicines.update                 | App\Http\Controllers\MedicineController@update               | api,cors          |
+|        | GET|HEAD  | api/tasks                                               | tasks.index                      | App\Http\Controllers\TaskController@index                    | api,cors          |
+|        | POST      | api/tasks                                               | tasks.store                      | App\Http\Controllers\TaskController@store                    | api,cors          |
+|        | GET|HEAD  | api/tasks/{task}                                        | tasks.show                       | App\Http\Controllers\TaskController@show                     | api,cors          |
+|        | PUT|PATCH | api/tasks/{task}                                        | tasks.update                     | App\Http\Controllers\TaskController@update                   | api,cors          |
+|        | DELETE    | api/tasks/{task}                                        | tasks.destroy                    | App\Http\Controllers\TaskController@destroy                  | api,cors          |
+|        | GET|HEAD  | api/user                                                |                                  | Closure                                                      | api,cors,auth:api |
+|        | GET|HEAD  | api/users                                               | users.index                      | App\Http\Controllers\UserController@index                    | api,cors          |
+|        | POST      | api/users                                               | users.store                      | App\Http\Controllers\UserController@store                    | api,cors          |
+|        | GET|HEAD  | api/users-employment-history                            | users-employment-history.index   | App\Http\Controllers\UserEmploymentHistoryController@index   | api,cors          |
+|        | POST      | api/users-employment-history                            | users-employment-history.store   | App\Http\Controllers\UserEmploymentHistoryController@store   | api,cors          |
+|        | GET|HEAD  | api/users-employment-history/{users_employment_history} | users-employment-history.show    | App\Http\Controllers\UserEmploymentHistoryController@show    | api,cors          |
+|        | PUT|PATCH | api/users-employment-history/{users_employment_history} | users-employment-history.update  | App\Http\Controllers\UserEmploymentHistoryController@update  | api,cors          |
+|        | DELETE    | api/users-employment-history/{users_employment_history} | users-employment-history.destroy | App\Http\Controllers\UserEmploymentHistoryController@destroy | api,cors          |
+|        | GET|HEAD  | api/users/{user}                                        | users.show                       | App\Http\Controllers\UserController@show                     | api,cors          |
+|        | PUT|PATCH | api/users/{user}                                        | users.update                     | App\Http\Controllers\UserController@update                   | api,cors          |
+|        | DELETE    | api/users/{user}                                        | users.destroy                    | App\Http\Controllers\UserController@destroy                  | api,cors          |
 +--------+-----------+---------------------------------------------------------+----------------------------------+--------------------------------------------------------------+-------------------+
