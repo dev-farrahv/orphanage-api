@@ -65,3 +65,31 @@
 |        | PUT|PATCH | api/users/{user}                                        | users.update                     | App\Http\Controllers\UserController@update                   | api,cors          |
 |        | DELETE    | api/users/{user}                                        | users.destroy                    | App\Http\Controllers\UserController@destroy                  | api,cors          |
 +--------+-----------+---------------------------------------------------------+----------------------------------+--------------------------------------------------------------+-------------------+
+
+
+
+
+
+
+
+FOR getting archived dynamically use:
+METHOD: GET
+BASEPATH: http://orphanage-api.test/api/archives-get-all-by-archive
+PARAMS:
+        {
+        table: {table_name}
+        archived_value: {archived value}
+        }
+TABLE NAMES:
+users = users
+users-employment-history = user_employment_histories
+tasks = tasks
+medicines = medicines
+hospitals = hospitals
+guests = guests
+elders = elders
+elders-taken-medicine = elder_taken_meds 
+elders-medical-history = elder_medical_histories
+doctors = doctors
+archives = archives
+

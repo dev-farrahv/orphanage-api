@@ -1,6 +1,7 @@
 <?php
-use DB;
+
 namespace App\Http\Controllers;
+use DB;
 use App\Archive;
 use App\Doctor;
 use App\Elder;
@@ -53,7 +54,7 @@ class ArchiveController extends Controller
         $params = $request->all();
 
         //if($request->has('is_admin')){
-            $collection = DB::table($params['table'])->get();
+            $collection = DB::table($params['table'])->where('archived', $params['archived_value'])->get();
             //$collection = $params['table']::where('archived', $params['archived_value'])->get();
             return $collection;
         //}
