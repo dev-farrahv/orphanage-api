@@ -14,6 +14,8 @@ use App\Medicine;
 use App\Task;
 use App\User;
 use App\UserEmploymentHistory;
+use App\Accomplishments;
+use App\MedicineInventory;
 use Illuminate\Http\Request;
 
 class ArchiveController extends Controller
@@ -53,7 +55,7 @@ class ArchiveController extends Controller
     {
         $params = $request->all();
 
-        //if($request->has('is_admin')){
+        //if($request->has('role')){
             $collection = DB::table($params['table'])->where('archived', $params['archived_value'])->get();
             //$collection = $params['table']::where('archived', $params['archived_value'])->get();
             return $collection;

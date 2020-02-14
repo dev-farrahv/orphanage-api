@@ -38,7 +38,7 @@ class User extends Authenticatable
         'oi_sss',
         'oi_umid',
         'oi_pagibig',
-        'is_admin',
+        'role',
         'status',
         'archived',
         'created_by',

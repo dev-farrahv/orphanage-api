@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class MedicineInventory extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,12 +12,13 @@ class Event extends Model
      * @var array
      */
     protected $fillable = [
-        'title',
-        'start',
-        'allDay',
-        'archived',
+        'medicine_name',
+        'type_of_medicine',
+        'medicine_restock',
+        'medicine_dispense',
+        'remaining_stock',
         'created_by',
-        'updated_by',
+        'updated_by' 
     ];
 
 

@@ -11,8 +11,8 @@ class UserController extends Controller
     {
         $params = $request->all();
 
-        if($request->has('is_admin')){
-            $collection = User::where('is_admin', $params['is_admin'])->get();
+        if($request->has('role')){
+            $collection = User::where('role', $params['role'])->get();
             return $collection;
         }
         
