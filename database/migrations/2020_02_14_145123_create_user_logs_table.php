@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDoctorsTable extends Migration
+class CreateUserLogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class CreateDoctorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('doctors', function (Blueprint $table) {
+        Schema::create('user_logs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('doc_name')->nullable();
-            $table->string('contact_no')->nullable();
-            $table->json('doctor_contact')->nullable();
-            $table->json('schedules')->nullable();
-            $table->string('specialization')->nullable();
+            $table->string('staff_id')->nullable();
+            $table->string('staff_name')->nullable();
+            $table->integer('time_in')->nullable();
+            $table->integer('time_out')->nullable();
+            $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
-            $table->boolean('archived')->default(false);
             $table->timestamps();
         });
     }
@@ -34,6 +33,6 @@ class CreateDoctorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doctors');
+        Schema::dropIfExists('user_logs');
     }
 }

@@ -33,6 +33,7 @@ Route::resource('accomplishments', 'AccomplishmentsController', ['only' => ['ind
 Route::resource('medicine-inventory', 'MedicineInventoryController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('event', 'EventController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('medicine-reports', 'MedicineReportController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+Route::resource('user-log', 'UserLogController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 
 //Route::resource('archives-get-all-by-archive', 'ArchiveController@getAllByArchived', ['except' => ['destroy']]);
 Route::get('archives-get-all-by-archive', 'ArchiveController@getAllByArchived');
