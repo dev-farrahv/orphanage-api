@@ -21,6 +21,7 @@ class Users extends Migration
             $table->string('email')->nullable();;
             $table->string('username')->nullable();
             $table->string('password')->nullable();
+            $table->string('image')->nullable();
             $table->string('nick_name')->nullable();
             $table->string('gender')->nullable(); // 1=male, 2=female
             $table->integer('age')->nullable();
