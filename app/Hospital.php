@@ -30,6 +30,7 @@ class Hospital extends Model
      * @var array
      */
     protected $casts = [
+        'service_offer' => 'array',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
