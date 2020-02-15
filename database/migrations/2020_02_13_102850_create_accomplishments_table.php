@@ -21,7 +21,7 @@ class CreateAccomplishmentsTable extends Migration
             $table->string('remarks')->nullable();
             $table->string('time_in')->nullable();
             $table->string('time_out')->nullable();
-            $table->string('subbmitted_by')->nullable();
+            $table->json('submitted_by')->nullable();
             $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();

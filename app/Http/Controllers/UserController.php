@@ -39,7 +39,7 @@ class UserController extends Controller
     {
         $User = User::findOrFail($id);
         $data = $request->all();
-        $data['password'] = Hash::make($data['password']);
+        // $data['password'] = Hash::make($data['password']);
         $User->update($data);
 
         return $User;

@@ -18,7 +18,7 @@ class Accomplishments extends Model
         'remarks',
         'time_in',
         'time_out',
-        'subbmitted_by',
+        'submitted_by',
         'archived',
         'created_by',
         'updated_by',
@@ -32,6 +32,7 @@ class Accomplishments extends Model
      * @var array
      */
     protected $casts = [
+        'submitted_by' => 'array',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];

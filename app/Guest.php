@@ -20,6 +20,7 @@ class Guest extends Model
         'relationship_id',
         'relationship_description',
         'elder_id',
+        'elder_name',
         'time_in',
         'time_out',
         'created_by',
