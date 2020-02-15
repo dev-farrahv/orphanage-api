@@ -29,6 +29,8 @@ class Doctor extends Model
      * @var array
      */
     protected $casts = [
+        'doctor_contact' => 'array',
+        'schedules' => 'array',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
