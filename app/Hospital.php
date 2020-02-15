@@ -15,6 +15,7 @@ class Hospital extends Model
         'hospital_name',
         'address',
         'hospital_contact_no',
+        'contact_doctors',
         'about',
         'service_offer',
         'archived',
@@ -30,6 +31,8 @@ class Hospital extends Model
      * @var array
      */
     protected $casts = [
+        'contact_doctors' => 'array',
+        'service_offer' => 'array',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];

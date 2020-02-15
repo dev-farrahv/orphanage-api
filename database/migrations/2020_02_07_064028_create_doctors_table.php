@@ -17,8 +17,7 @@ class CreateDoctorsTable extends Migration
             $table->bigIncrements('id');
             $table->string('doc_name')->nullable();
             $table->string('contact_no')->nullable();
-            $table->json('doctor_contact')->nullable();
-            $table->json('schedules')->nullable();
+            $table->string('schedules')->nullable();
             $table->string('specialization')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();

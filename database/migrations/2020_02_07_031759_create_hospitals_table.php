@@ -18,6 +18,7 @@ class CreateHospitalsTable extends Migration
             $table->string('hospital_name')->nullable();
             $table->string('address')->nullable();
             $table->string('hospital_contact_no')->nullable();
+            $table->json('contact_doctors')->nullable();
             $table->string('about')->nullable();
             $table->json('service_offer')->nullable();
             $table->integer('created_by')->nullable();
