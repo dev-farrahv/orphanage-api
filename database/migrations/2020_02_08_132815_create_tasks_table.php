@@ -25,6 +25,7 @@ class CreateTasksTable extends Migration
             $table->string('status')->nullable();
             $table->string('task_description')->nullable();
             $table->string('task_owner_id')->nullable();
+            $table->string('task_owner_role')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->boolean('archived')->default(false);
