@@ -11,7 +11,7 @@ class TaskController extends Controller
         $params = $request->all();
 
         if($request->has('task_owner_role')){
-            $collection = Task::where('task_owner_role', $params['task_owner_role]'])->get();
+            $collection = Task::where('task_owner_role', $params['task_owner_role'])->get();
             return $collection;
         }        
 

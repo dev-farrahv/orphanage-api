@@ -52,4 +52,30 @@ class UserController extends Controller
 
         return 204;
     }
+
+
+    //update email and password/ validation for email if exists
+    public function updateEmailPassword(Request $request)
+    {
+        $data = $request->all();
+        $data['password'] = Hash::make($data['password']);
+
+        $result = User::where('email', $data['email'])
+        ->update([
+            'password' => $data['password']
+        ]);
+
+
+        if($result){
+            return response()->json([
+                'message' => 'password has been updated.'
+            ], 200);
+        } else {
+            return response()->json([
+                'message' => 'Email not found.'
+            ], 404);            
+        }
+    }
+
 }
+

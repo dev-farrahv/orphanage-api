@@ -18,9 +18,10 @@ class CreateEventsTable extends Migration
             $table->string('title')->nullable();
             $table->string('start')->nullable();
             $table->boolean('allDay')->default(false);
+            $table->string('type')->nullable();
             $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
-            $table->integer('updated_by')->nullable();            
+            $table->integer('updated_by')->nullable();
             $table->timestamps();
         });
     }
