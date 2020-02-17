@@ -12,14 +12,15 @@ class MedicineReport extends Model
      * @var array
      */
     protected $fillable = [
-        'medicine_id',
-        'medicine_description',
-        'type_of_medicine',
-        'qty',
-        'status',
+        'medicine_name',
+        'medicine_type',
+        'action',
+        'quantity',
+        'remaining_stock',
+        'staff',
         'archived',
         'created_by',
-        'updated_by'
+        'updated_by' 
     ];
 
 
@@ -30,6 +31,7 @@ class MedicineReport extends Model
      * @var array
      */
     protected $casts = [
+        'staff' => 'array',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
