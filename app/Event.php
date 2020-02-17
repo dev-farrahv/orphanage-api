@@ -15,6 +15,7 @@ class Event extends Model
         'title',
         'start',
         'allDay',
+        'type',
         'archived',
         'created_by',
         'updated_by',

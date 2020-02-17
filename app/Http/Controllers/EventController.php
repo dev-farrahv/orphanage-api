@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $params = $request->all();
+
+        if($request->has('type')){
+            $collection = Event::where('type', $params['type'])->get();
+            return $collection;
+        }
+        
         return Event::all();
     }
  
