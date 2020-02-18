@@ -1,0 +1,13 @@
+//=======================================================================
+//  For getting of NOTES, ANNOUNCEMENT ANF OTHER TYPES ON EVENT ENDPOINT
+//========================================================================
+
+METHOD: GET
+URL:  [BASEPATH]api/event 
+PARAMS:
+        {
+        type: {table_name}
+        }
+
+DESCRIPTION:
+type is for getting if notes or annoucement or other statuses. 
