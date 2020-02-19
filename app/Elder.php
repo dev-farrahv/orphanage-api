@@ -43,6 +43,7 @@ class Elder extends Model
         'created_by',
         'updated_by',
         'cp_work',
+        'image'
     ];
 
 

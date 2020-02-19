@@ -18,10 +18,10 @@ class FileUploadController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->image->store('images');
+        $data = $request->image->store('public/images');
 
         if($data){
-            $filePath = 'storage/app/images/'.$data; //storage/app/images/bqOziUTj2O1P599oftOmKm3OySvRV1WdzHdJPBzO.png
+            $filePath = $data; //storage/app/images/bqOziUTj2O1P599oftOmKm3OySvRV1WdzHdJPBzO.png
             return response()->json([
                 'filePath' => $filePath
             ], 200);            

@@ -24,6 +24,7 @@ class CreateEldersTable extends Migration
             $table->string('provincial_address')->nullable();
             $table->string('birth_date')->nullable();
             $table->string('sabbath')->nullable();
+            $table->string('image')->nullable();
             $table->string('civil_status')->nullable(); // 1=single, 2=married, 3=widowed
             $table->string('gender')->nullable(); // 1=male, 2=female
             $table->string('date_stay_in_orphanage')->nullable();
