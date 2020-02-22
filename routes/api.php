@@ -35,6 +35,7 @@ Route::resource('event', 'EventController', ['only' => ['index', 'show', 'store'
 Route::resource('medicine-reports', 'MedicineReportController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('user-log', 'UserLogController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('file-upload', 'FileUploadController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+Route::resource('note', 'NoteController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 
 //Route::resource('archives-get-all-by-archive', 'ArchiveController@getAllByArchived', ['except' => ['destroy']]);
 Route::get('archives-get-all-by-archive', 'ArchiveController@getAllByArchived');
