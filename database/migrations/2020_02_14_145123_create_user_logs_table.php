@@ -15,11 +15,11 @@ class CreateUserLogsTable extends Migration
     {
         Schema::create('user_logs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('staff_id')->nullable();
-            $table->string('staff_name')->nullable();
-            $table->integer('time')->nullable();
-            $table->integer('action')->nullable();
+            $table->string('time')->nullable();
+            $table->string('action')->nullable();
             $table->boolean('archived')->default(false);
+            $table->string('name')->nullable();
+            $table->integer('role')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();

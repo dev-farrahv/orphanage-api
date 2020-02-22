@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserLog extends Model
 {
-    use Notifiable;
+    // use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -14,11 +14,11 @@ class UserLog extends Model
      * @var array
      */
     protected $fillable = [
-        'staff_id',
-        'staff_name',
         'time',
         'action',
         'archived',
+        'role',
+        'name',
         'created_by',
         'updated_by'
     ];
