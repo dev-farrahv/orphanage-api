@@ -17,8 +17,8 @@ class CreateUserLogsTable extends Migration
             $table->bigIncrements('id');
             $table->string('staff_id')->nullable();
             $table->string('staff_name')->nullable();
-            $table->integer('time_in')->nullable();
-            $table->integer('time_out')->nullable();
+            $table->integer('time')->nullable();
+            $table->integer('action')->nullable();
             $table->boolean('archived')->default(false);
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();

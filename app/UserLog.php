@@ -16,8 +16,8 @@ class UserLog extends Model
     protected $fillable = [
         'staff_id',
         'staff_name',
-        'time_in',
-        'time_out',
+        'time',
+        'action',
         'archived',
         'created_by',
         'updated_by'
