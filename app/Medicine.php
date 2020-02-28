@@ -18,6 +18,8 @@ class Medicine extends Model
         'expiration_date',
         'type_of_medicine_id',
         'type_of_medicine_description',
+        'buffer',
+        'dispense',
         'qty',
         'created_by',
         'updated_by',    
