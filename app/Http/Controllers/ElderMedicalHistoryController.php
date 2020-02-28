@@ -10,10 +10,16 @@ class ElderMedicalHistoryController extends Controller
     {
         $params = $request->all();
 
+        if($request->has('type')){
+            $collection = ElderMedicalHistory::where('elder_id', $params['elder_id'])->where('type', $params['type'])->get();
+            return $collection;
+        }
+
         if($request->has('elder_id')){
             $collection = ElderMedicalHistory::where('elder_id', $params['elder_id'])->get();
             return $collection;
         }
+
         return ElderMedicalHistory::all();
     }
  

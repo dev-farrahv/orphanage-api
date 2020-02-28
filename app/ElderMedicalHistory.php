@@ -15,14 +15,13 @@ class ElderMedicalHistory extends Model
      */
     protected $fillable = [
         'elder_id',
-        'present_illness_id',
-        'present_illness_description',
-        'past_illness_id',
-        'past_illness_description',
-        'family_history_illness_id',
-        'family_history_description',
+        'type',
+        'illness',
+        'description',
         'assigned_doctor_id',
         'assigned_doctor_name',
+        'duration_from',
+        'duration_to',
         'created_by',
         'updated_by',
     ];
