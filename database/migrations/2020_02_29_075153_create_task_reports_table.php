@@ -15,6 +15,7 @@ class CreateTaskReportsTable extends Migration
     {
         Schema::create('task_reports', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('task_id')->nullable();
             $table->integer('elder_id')->nullable();
             $table->string('elder_name')->nullable();
             $table->integer('medicine_id')->nullable();

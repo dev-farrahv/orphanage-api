@@ -12,6 +12,7 @@ class TaskReports extends Model
      * @var array
      */
     protected $fillable = [
+        'task_id',
         'elder_id',
         'elder_name',
         'medicine_id',
