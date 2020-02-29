@@ -29,6 +29,7 @@ Route::resource('archives', 'ArchiveController', ['only' => ['index', 'show', 's
 Route::resource('hospitals', 'HospitalController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('doctors', 'DoctorController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('tasks', 'TaskController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+Route::resource('tasks-reports', 'TaskReportsController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('accomplishments', 'AccomplishmentsController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('medicine-inventory', 'MedicineInventoryController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 Route::resource('event', 'EventController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);

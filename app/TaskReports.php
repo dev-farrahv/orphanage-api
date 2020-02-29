@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class TaskReports extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -19,10 +19,10 @@ class Task extends Model
         'qty',
         'time',
         'date',
-        'date_repeats',
         'status',
         'task_description',
-        'task_owner_id',
+        'staff_name',
+        'staff_id',
         'archived',
         'created_by',
         'updated_by',   
@@ -35,7 +35,6 @@ class Task extends Model
      * @var array
      */
     protected $casts = [
-        'date_repeats' => 'array',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
