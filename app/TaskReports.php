@@ -23,7 +23,6 @@ class TaskReports extends Model
         'task_description',
         'staff_name',
         'staff_id',
-        'archived',
         'created_by',
         'updated_by',   
     ];
