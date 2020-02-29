@@ -41,4 +41,5 @@ Route::resource('note', 'NoteController', ['only' => ['index', 'show', 'store', 
 //Route::resource('archives-get-all-by-archive', 'ArchiveController@getAllByArchived', ['except' => ['destroy']]);
 Route::get('archives-get-all-by-archive', 'ArchiveController@getAllByArchived');
 Route::post('change-password', 'UserController@updateEmailPassword');
+Route::get('task-reports-by-date', 'TaskReportsController@getTaskByDateToday');
 

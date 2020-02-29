@@ -42,4 +42,22 @@ class TaskReportsController extends Controller
 
         return 204;
     }
+
+    public function getTaskByDateToday()
+    {
+        // $params = $request->all();
+
+        // if($request->has('staff_id')){
+        //     $collection = TaskReports::where('date', $params['staff_id'])->get();
+        //     return $collection;
+        // }
+        $datataskreports = TaskReports::all();
+        $finaltaskreports = [];
+        foreach ($datataskreports as $data) {
+            if(date('d-m-Y', strtotime($data['date'])) == date('d-m-Y')){
+                array_push($finaltaskreports, $data);
+            }
+        }
+        return $finaltaskreports;
+    }
 }
