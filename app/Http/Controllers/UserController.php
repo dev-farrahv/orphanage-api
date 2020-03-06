@@ -15,6 +15,11 @@ class UserController extends Controller
             $collection = User::where('role', $params['role'])->get();
             return $collection;
         }
+
+        if ($request->has('email')){
+            $collection = User::where('email', $params['email'])->first();;
+            return $collection;
+        }
         
         return User::all();
     }

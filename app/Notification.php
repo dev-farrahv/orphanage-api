@@ -14,8 +14,10 @@ class Notification extends Model
     protected $fillable = [
         'staff_id',
         'staff_name',
+        'title',
         'description',
         'type',
+        'isNew',
         'created_by',
         'updated_by',
     ];
