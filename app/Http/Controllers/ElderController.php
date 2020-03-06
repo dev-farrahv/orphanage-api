@@ -19,6 +19,14 @@ class ElderController extends Controller
 
     public function store(Request $request)
     {
+        $bed_no_exist = Elder::where('bed_no', $request['bed_no'])->get();
+
+        if( count($bed_no_exist) > 0 ){
+            return response()->json([
+                'message' => 'Bed number already exist.'
+            ], 409);
+        }
+
         return Elder::create($request->all());
     }
 
